@@ -28,9 +28,9 @@ var App = React.createClass({
      hand: getDeck().shuffle().splice(0,5)
    })
  },
-  getInitialState: function() {
+  getInitialState: function(){
     return {
-      Card: card
+      hand: this.state.hand [0,1,2,3,4]
       }
   },
   render: function() {

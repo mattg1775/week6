@@ -1,22 +1,25 @@
 var React = require('react')
 
 var Card = React.createClass({
-  render: function() {
+  dealClicked: function() {
+    this.props.dealClicked(this.props.card)
+  },
+    render: function() {
     return (
         <div className="col-sm-2">
-          <img img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.cards + ".png"} /></h1>
+          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.card + ".png"} /></h1>
         </div>
         <div className="col-sm-2">
-          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.cards + ".png"} /></h1>
+          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.card + ".png"} /></h1>
         </div>
         <div className="col-sm-2">
-          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.cards + ".png"} /></h1>
+          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.card + ".png"} /></h1>
         </div>
         <div className="col-sm-2">
-          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.cards + ".png"} /></h1>
+          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.card + ".png"} /></h1>
         </div>
         <div className="col-sm-2">
-          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.cards + ".png"} /></h1>
+          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.card + ".png"} /></h1>
         </div>
     )
   }
