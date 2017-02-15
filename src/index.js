@@ -23,33 +23,28 @@ var Card = require('./components/Card')
 // END OF STUFF TO NOT MODIFY
 
 var App = React.createClass({
+  dealClicked: function(){
+   this.setState({
+     hand: getDeck().shuffle().splice(0,5)
+   })
+ },
+  getInitialState: function() {
+    return {
+      Card: card
+      }
+  },
   render: function() {
     return (
       <div>
         <h1>Welcome to the KIEI-924 Casino!</h1>
         <div className="row">
+          <h1>{this.state.card} />
           <div className="col-sm-2">
-            <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + "face_down" + ".png"} /></h1>
+            <h1><a href="#" onClick={this.getDeck().shuffle().splice(0,5)} className="btn btn-success">Deal</a></h1>
           </div>
-          <div className="col-sm-2">
-            <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + "face_down" + ".png"} /></h1>
-          </div>
-          <div className="col-sm-2">
-            <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + "face_down" + ".png"} /></h1>
-          </div>
-          <div className="col-sm-2">
-            <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + "face_down" + ".png"} /></h1>
-          </div>
-          <div className="col-sm-2">
-            <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + "face_down" + ".png"} /></h1>
-          </div>
-          <div className="col-sm-2">
-            <h1><a href="#" className="btn btn-success">Deal</a></h1>
-          </div>
-        </div>
-      </div>
     )
   }
 })
+    //END OF VAR APP FUNCTION
 
 ReactDOM.render(<App />, document.getElementById("app"))
